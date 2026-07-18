@@ -23,7 +23,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm ci
+      # npm install, not npm ci: mapshaper pulls a wildcard @types/node, so a
+      # freshly generated lockfile still fails `npm ci` with EUSAGE. This installs
+      # a build tool for the data step, not the shipped bundle — the deploy
+      # workflow still uses `npm ci` at the root, where reproducibility matters.
+      - run: npm install --no-audit --no-fund
         working-directory: pipeline
       - run: node pipeline/collect.mjs
       - run: node pipeline/aggregate.mjs

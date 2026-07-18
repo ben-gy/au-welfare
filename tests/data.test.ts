@@ -1,6 +1,8 @@
-// Tests for the column-table expansion and the pipeline's pure helpers. The
-// pipeline functions are imported straight from the .mjs so the shipped parser
-// is what gets tested, not a copy of it.
+// Tests for the column-table expansion and the pipeline's pure parsers. They are
+// imported straight from pipeline/parse.mjs so the shipped parser is what gets
+// tested, not a copy of it. parse.mjs is deliberately dependency-free (node
+// builtins only) — importing aggregate.mjs here would drag mapshaper, a
+// pipeline-only dependency, into the frontend test run and break CI.
 
 import { describe, expect, it } from 'vitest';
 import { expandRegions, METRICS, METRIC_BY_KEY } from '../src/data';
@@ -13,7 +15,7 @@ import {
   safeRate,
   serialToMonth,
   MIN_DENOM,
-} from '../pipeline/aggregate.mjs';
+} from '../pipeline/parse.mjs';
 
 describe('expandRegions', () => {
   const table = {

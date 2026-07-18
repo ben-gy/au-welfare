@@ -10,3 +10,4 @@ coverage
 .env.local
 .claude/
 pipeline/tmp/
+pipeline/package-lock.json
