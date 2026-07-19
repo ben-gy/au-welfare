@@ -1,3 +1,8 @@
+// feedback:begin (managed by hub/scripts/feedback/backfill.mjs)
+import { mountFeedback } from './feedback';
+mountFeedback();
+// feedback:end
+
 import './styles.css';
 import { loadData, type Dataset, type Region } from './data';
 import { hideTooltip, initTooltip } from './components/tooltip';
