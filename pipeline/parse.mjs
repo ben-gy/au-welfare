@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Pure parsing + taxonomy for the DSS/ABS sources. Deliberately dependency-free
 // (node builtins only) so the frontend test suite can import the very parser that
 // ships, without dragging mapshaper — a pipeline-only dependency — into Vitest.

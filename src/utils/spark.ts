@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // Inline sparkline path generation. Pure so the geometry can be tested.
 
 export interface SparkGeometry { path: string; area: string; lastX: number; lastY: number }

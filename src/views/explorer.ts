@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Ben Richardson — https://benrichardson.dev
+// Additional terms under AGPL-3.0 section 7(b) apply; see ADDITIONAL-TERMS.md.
 // The workhorse table: every SA2, sortable and searchable, with a sparkline of the
 // working-age caseload across the published quarters. Accepts a filter payload from
 // the Distribution view (click a bin -> land here with just those areas).
