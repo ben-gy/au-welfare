@@ -5,6 +5,14 @@
  */
 @import 'leaflet/dist/leaflet.css';
 
+/* The [hidden] guard — MUST stay above the component rules.
+   An author rule like `.modal{display:grid}` or `.drawer{display:flex}` outranks
+   the browser's `[hidden]{display:none}` (author origin beats the UA stylesheet
+   regardless of specificity), so an element hidden via the `hidden` ATTRIBUTE
+   that is also given a `display` by a class is never actually hidden — and
+   `el.hidden = true` does nothing at all. */
+[hidden] { display: none !important; }
+
 :root {
   /* Civic light palette — ABS/AIHW register: white ground, navy structure, teal accent.
      Deliberately not a dark "monitoring" theme: this is data about people, and a
